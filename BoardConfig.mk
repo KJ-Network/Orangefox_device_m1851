@@ -58,7 +58,7 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET     := 0x01000000
-TARGET_PREBUILT_KERNEL := device/xiaomi/whyred/prebuilt/Image.gz-dtb
+TARGET_PREBUILT_KERNEL := device/meizu/m1851/prebuilt/Image.gz-dtb
 
 # Platform
 TARGET_BOARD_PLATFORM := sdm660
@@ -101,8 +101,3 @@ TW_SCREEN_BLANK_ON_BOOT := true
 TW_THEME := portrait_hdpi
 TW_USE_TOOLBOX := true
 
-# Add Support for Miui 12.x Android 11 Decryption
-BOARD_AVB_RECOVERY_ADD_HASH_FOOTER_ARGS += \
-    --prop com.android.build.boot.os_version:$(PLATFORM_VERSION) \
-    --prop com.android.build.boot.security_patch:$(PLATFORM_SECURITY_PATCH)
-#

@@ -17,7 +17,7 @@
 #
 # 	Please maintain this if you use this script or any part of it
 #
-FDEVICE="whyred"
+FDEVICE="m1851"
 
 fox_get_target_device() {
 local chkdev=$(echo "$BASH_SOURCE" | grep $FDEVICE)
@@ -55,7 +55,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export OF_CHECK_OVERWRITE_ATTEMPTS=1
 
     # About Settings
-    export OF_MAINTAINER="Sushrut Gupta"
+    export OF_MAINTAINER="KeJia"
     export FOX_VERSION="R11.1"
     export FOX_BUILD_TYPE="Stable"
 
@@ -69,7 +69,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_USE_XZ_UTILS=1
 	export OF_USE_GREEN_LED=1
 
-    OF_TARGET_DEVICES="whyred,whyredin"
+    OF_TARGET_DEVICES="m1851"
     OF_USE_TWRP_SAR_DETECT="1"
 
 	# OTA for custom ROMs
@@ -95,5 +95,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 
 	add_lunch_combo omni_"$FDEVICE"-eng
 	add_lunch_combo omni_"$FDEVICE"-userdebug
+
 fi
 #
